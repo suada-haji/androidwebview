@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
-    private String postUrl= "http://api.androidhive.info/webview/index.html";
+    private String postUrl = "http://api.androidhive.info/webview/index.html";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         initCollapsingToolbar();
-
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl(postUrl);
