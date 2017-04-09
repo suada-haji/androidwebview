@@ -46,11 +46,18 @@ public class MainActivity extends AppCompatActivity {
         initCollapsingToolbar();
 
         webView.getSettings().setJavaScriptEnabled(true);
-       // webView.loadUrl(postUrl);
+        webView.loadUrl(postUrl);
 
         // Loading local html file into web view
-        webView.loadUrl("file:///android_asset/sample.html");
+        //webView.loadUrl("file:///android_asset/sample.html");
         webView.setHorizontalScrollBarEnabled(false);
+
+        /**
+         * Enabling zoom-in controls
+         * */
+        webView.getSettings().setSupportZoom(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(true);
     }
 
     private void initCollapsingToolbar() {
